@@ -14,4 +14,11 @@ static const char * const kMPApplicationShortVersion = \"$SHORT_VERSION\";
 static const char * const kMPApplicationBundleVersion = \"$BUNDLE_VERSION\";
 
 #endif
-" > version.h
+" > version.h.tmp
+
+# Leave an up-to-date header untouched so its importers don't recompile.
+if cmp -s version.h.tmp version.h; then
+    rm version.h.tmp
+else
+    mv version.h.tmp version.h
+fi

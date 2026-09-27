@@ -1,9 +1,13 @@
 ALL: version.h
 
-version.h:
+# Always run the generator: the version comes from git, which make can't
+# track. The script only rewrites version.h when the version changes.
+version.h: FORCE
 	bash ../../Tools/generate_version_header.sh
 
-.PHONY: install clean distclean
+FORCE:
+
+.PHONY: install clean distclean FORCE
 
 install: ALL
 
