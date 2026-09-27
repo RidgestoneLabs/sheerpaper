@@ -1,8 +1,8 @@
-# MacDown
+# Sheerpaper
 
-![MacDown logo](https://macdown.uranusjr.com/static/images/logo-160.png)
+![Sheerpaper logo](https://raw.githubusercontent.com/RidgestoneLabs/sheerpaper/master/MacDown/Images.xcassets/AppIcon.appiconset/icon_128x128@2x.png)
 
-Hello there! I’m **MacDown**, the open source Markdown editor for OS X.
+Hello there! I’m **Sheerpaper**, the open source Markdown editor for OS X.
 
 Let me introduce myself.
 
@@ -12,9 +12,9 @@ Let me introduce myself.
 
 **Markdown** is a plain text formatting syntax created by John Gruber, aiming to provide a easy-to-read and feasible markup. The original Markdown syntax specification can be found [here](https://daringfireball.net/projects/markdown/syntax).
 
-**MacDown** is created as a simple-to-use editor for Markdown documents. I render your Markdown contents real-time into HTML, and display them in a preview panel.
+**Sheerpaper** is created as a simple-to-use editor for Markdown documents. I render your Markdown contents real-time into HTML, and display them in a preview panel.
 
-![MacDown Screenshot](https://d.pr/i/10UGP+)
+![Sheerpaper Screenshot](https://d.pr/i/10UGP+)
 
 I support all the original Markdown syntaxes. But I can do so much more! Various popular but non-standard syntaxes can be turned on/off from the [**Markdown** preference pane](#markdown-pane).
 
@@ -72,27 +72,27 @@ or
 
 ### Links and Email
 #### Inline
-Just put angle brackets around an email and it becomes clickable: <uranusjr@gmail.com>  
-`<uranusjr@gmail.com>`  
+Just put angle brackets around an email and it becomes clickable: <hello@example.com>  
+`<hello@example.com>`  
 
-Same thing with urls: <https://macdown.uranusjr.com>  
-` <https://macdown.uranusjr.com>`  
+Same thing with urls: <https://github.com/RidgestoneLabs/sheerpaper>  
+` <https://github.com/RidgestoneLabs/sheerpaper>`  
 
-Perhaps you want to link some text like this: [Macdown Website](https://macdown.uranusjr.com "Title")  
-`[Macdown Website](https://macdown.uranusjr.com "Title")` (The title is optional)  
+Perhaps you want to link some text like this: [Sheerpaper Website](https://github.com/RidgestoneLabs/sheerpaper "Title")  
+`[Sheerpaper Website](https://github.com/RidgestoneLabs/sheerpaper "Title")` (The title is optional)  
 
 
 #### Reference style
 Sometimes it looks too messy to include big long urls inline, or you want to keep all your urls together.  
 
 Make [a link][arbitrary_id] `[a link][arbitrary_id]` then on it's own line anywhere else in the file:  
-`[arbitrary_id]: https://macdown.uranusjr.com "Title"`
+`[arbitrary_id]: https://github.com/RidgestoneLabs/sheerpaper "Title"`
   
 If the link text itself would make a good id, you can link [like this][] `[like this][]`, then on it's own line anywhere else in the file:  
-`[like this]: https://macdown.uranusjr.com`  
+`[like this]: https://github.com/RidgestoneLabs/sheerpaper`  
 
-[arbitrary_id]: https://macdown.uranusjr.com "Title"
-[like this]: https://macdown.uranusjr.com  
+[arbitrary_id]: https://github.com/RidgestoneLabs/sheerpaper "Title"
+[like this]: https://github.com/RidgestoneLabs/sheerpaper  
 
 
 ### Images
@@ -235,7 +235,7 @@ You can add an optional language ID at the end of the first line. The language I
 
 ![Syntax highlighting example](https://d.pr/i/9HM6+)
 
-I support many popular languages as well as some generic syntax descriptions that can be used if your language of choice is not supported. See [relevant sections on the official site](https://macdown.uranusjr.com/features/) for a full list of supported syntaxes.
+I support many popular languages as well as some generic syntax descriptions that can be used if your language of choice is not supported. See [Prism’s list of supported languages](https://prismjs.com/#supported-languages) for a full list of supported syntaxes.
 
 
 ### Inline Formatting
@@ -297,7 +297,7 @@ If you like, I can display Jekyll front-matter in a nice table. Just make sure y
 
 ```
 ---
-title: "Macdown is my friend"
+title: "Sheerpaper is my friend"
 date: 2014-06-06 20:00:00
 ---
 ```
@@ -329,10 +329,10 @@ I offer auto-completion and other functions to ease your editing experience. If 
 
 ## Hidden preference
 
-You can see the HTML behind a preview by enabling the OS X built-in WebKit developer tools for MacDown in a terminal window:
+You can see the HTML behind a preview by enabling the OS X built-in WebKit developer tools for Sheerpaper in a terminal window:
 
 ```
-defaults write com.uranusjr.macdown WebKitDeveloperExtras -bool true
+defaults write com.ridgestonelabs.sheerpaper WebKitDeveloperExtras -bool true
 ```
 
 Then select “Inspect Element” in the right-click context menu inside the preview pane.

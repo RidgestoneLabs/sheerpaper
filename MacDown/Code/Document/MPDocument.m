@@ -1913,12 +1913,12 @@ static void (^MPGetPreviewLoadingCompletionHandler(MPDocument *doc))()
 
 #define OPEN_FAIL_ALERT_INFORMATIVE NSLocalizedString( \
 @"Please check the path of your link is correct. Turn on \
-“Automatically create link targets” If you want MacDown to \
+“Automatically create link targets” If you want Sheerpaper to \
 create nonexistent link targets for you.", \
 @"preview navigation error information")
 
 #define AUTO_CREATE_FAIL_ALERT_INFORMATIVE NSLocalizedString( \
-@"MacDown can’t create a file for the clicked link because \
+@"Sheerpaper can’t create a file for the clicked link because \
 the current file is not saved anywhere yet. Save the \
 current file somewhere to enable this feature.", \
 @"preview navigation error information")
