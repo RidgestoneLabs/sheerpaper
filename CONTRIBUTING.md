@@ -1,8 +1,12 @@
-# Contributing to MacDown
+# Contributing to Sheerpaper
+
+Bug reports and pull requests are welcome on [RidgestoneLabs/sheerpaper](https://github.com/RidgestoneLabs/sheerpaper). The [README](README.md#building) covers building and running the tests. Please run the tests before opening a pull request.
+
+The coding style below comes from MacDown, and the existing code follows it.
 
 ## Coding Style
 
-All style rules are enforced under all circumstances except for external dependencies.
+All style rules apply everywhere except external dependencies.
 
 ### Objective-C
 
@@ -10,33 +14,33 @@ All style rules are enforced under all circumstances except for external depende
 
 All code should obey the 80-column rule.
 
-Exception: If a URL in a comment is too long, it can go over the limit. This happens a lot for Apple’s official documentation. Remember, however, that many websites offer alternative, shorter URL forms that are permanent. For example:
+Exception: a URL in a comment may go over the limit. This happens a lot with Apple's documentation. Many sites offer shorter permanent forms of their URLs, though. For example:
 
-* The title slug in StackOverflow (and other StackExchange sites) URLs can be ommitted. The following two are equivalent:
+* The title slug in Stack Overflow (and other Stack Exchange sites) URLs can be omitted. These two are equivalent:
 
     `http://stackoverflow.com/questions/13155612/how-does-one-eliminate-objective-c-try-catch-blocks-like-this`
     `http://stackoverflow.com/questions/13155612`
 
-* The commit hash in GitHub commit page’s URL can be shortened. The followings are all equivalent:
+* The commit hash in a GitHub commit URL can be shortened. These are all equivalent:
 
-    `https://github.com/uranusjr/macdown/commit/1612abb9dbd24113751958777a49cffc6767989c`
-    `https://github.com/uranusjr/macdown/commit/1612abb9dbd24`
-    `https://github.com/uranusjr/macdown/commit/1612abb`
+    `https://github.com/RidgestoneLabs/sheerpaper/commit/1612abb9dbd24113751958777a49cffc6767989c`
+    `https://github.com/RidgestoneLabs/sheerpaper/commit/1612abb9dbd24`
+    `https://github.com/RidgestoneLabs/sheerpaper/commit/1612abb`
 
 #### Code Blocks
 
-* Braces go in separate lines. ([Allman style](http://en.wikipedia.org/wiki/Indent_style#Allman_style).)
-* If only one statement is contained inside the block, omit braces unless...
-    * This is part of an if-(else if-)else structure. All brace styles in the same structure should match (i.e. either non or all of them omit braces).
+* Braces go on separate lines. ([Allman style](http://en.wikipedia.org/wiki/Indent_style#Allman_style).)
+* If a block contains only one statement, omit the braces unless...
+    * It's part of an if-(else if-)else structure. All branches in the same structure should match: either none or all of them omit braces.
 
-#### Stetements Inside `if`, `while`, etc.
+#### Statements Inside `if`, `while`, etc.
 
 * Prefer implicit boolean conversion when it makes sense.
-    * `if (str.length)` is better than `if (str.length != 0)` if you want to know whether a string is empty. 
-    * The same applies when checking for an object’s `nil`-ness.
-    * If what you want to compare against is *zero as a number*, not emptiness, such as for `NSRange` position, `NSPoint` coordinates, etc., *do* use the `== 0`/`!= 0` expression.
+    * `if (str.length)` is better than `if (str.length != 0)` if you want to know whether a string is empty.
+    * The same applies when checking whether an object is `nil`.
+    * If you're comparing against *zero as a number* rather than checking for emptiness, such as an `NSRange` position or `NSPoint` coordinates, *do* use `== 0`/`!= 0`.
 
-* If statements need to span multiple lines, prefer putting logical operators at the *beginning* of the line.
+* If a condition spans multiple lines, put the logical operators at the *beginning* of each line.
 
     Yes:
     ```c
@@ -56,7 +60,7 @@ Exception: If a URL in a comment is too long, it can go over the limit. This hap
     }
     ```
 
-* If code alignment is ambiguious, add extra indentation.
+* If the alignment is ambiguous, add extra indentation.
 
     Yes:
     ```c
@@ -72,7 +76,7 @@ Exception: If a URL in a comment is too long, it can go over the limit. This hap
         foo++;
     ```
 
-    The above is not enforced (but recommended) if braces exist. Useful if you have a hard time fitting the statement into the 80-column constraint.
+    This is recommended but not enforced when the block has braces. It helps when a statement is hard to fit in 80 columns.
 
     Okay:
     ```c
@@ -86,26 +90,24 @@ Exception: If a URL in a comment is too long, it can go over the limit. This hap
 
 #### Invisible Characters
 
-Always use *four spaces* instead of tabs for indentation. Trailing whitespaces should be removed. You can turn on the **Automatically trim trailing whitespace** option in Xcode to let it do the job for you.
+Always indent with *four spaces*, not tabs. Remove trailing whitespace; Xcode's **Automatically trim trailing whitespace** option does this for you.
 
-Try to ensure that there’s a trailing newline in the end of a file. This is not strictly enforced since there are no easy ways to do that (except checking manually), but I’d appriciate the effort.
+End every file with a trailing newline.
 
 ## Version Control
 
-MacDown uses Git for source control, and is hosted on GitHub.
-
 ### Commit Messages
 
-[General rules](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) apply. If you absolutely need to, the first line of the message *can* go as long as 72 (instead of 50) characters, but it must not exceed it.
+[General rules](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) apply. If you really need to, the first line can run to 72 characters instead of 50, but no longer.
 
-Xcode’s commit window does not do a good job indicating whether your commit message is well-formed. I seldom use it personally, but if you do, you can check whether the commit message is good after you push to GitHub—If you see the first line of your commit message getting truncated, it is too long.
+Xcode's commit window doesn't show whether a message is well formed. If GitHub truncates the first line of your commit after you push, it's too long.
 
 ### Pull Requests
 
-Please rebase your branch to `master` when you submit the pull request. There can be some nagging bugs when Git tries to merge files that are not code, particularly `.xib` and project files. When in doubt, always consider splitting changes into smaller commits so that you won’t need to re-apply your changes when things break.
+Rebase your branch onto `main` before opening the pull request. Git can produce nagging merge bugs in files that aren't code, particularly `.xib` and project files. When in doubt, split changes into smaller commits so a broken merge doesn't mean redoing your work.
 
-Under certain circumstances I may wish you to perform further rebasing and/or squashing *after* you submit your pull request, or even perform them myself instead of merging your commits as-is. Don’t worry—you will always get full credits for your contribution.
+A maintainer may ask you to rebase or squash after you open the pull request, or do it when merging. You keep full credit for your contribution either way.
 
-## More to Come
+### Translations
 
-This style guide is a work in progress. Please feel free to ask if you have any questions about it. I’ll add more rules if there’s ambiguity.
+Localized strings live in `MacDown/Localization/<language>.lproj`. Edit them directly and send a pull request.
