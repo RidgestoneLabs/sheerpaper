@@ -2,6 +2,8 @@
 
 Sheerpaper is an open-source Markdown editor for macOS with a live preview. It's built for Apple Silicon and Intel Macs running macOS 12 or later.
 
+![Sheerpaper with a document in the editor and its live preview](assets/screenshot.png)
+
 Sheerpaper is based on [MacDown](https://github.com/MacDownApp/macdown) by [Tzu-ping Chung](https://github.com/uranusjr) and contributors. MacDown hasn't had a commit since April 2021, so Sheerpaper carries it forward under a new name.
 
 ## Install
