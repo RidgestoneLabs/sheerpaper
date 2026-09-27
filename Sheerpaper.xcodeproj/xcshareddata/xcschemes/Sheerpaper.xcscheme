@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1FA6DE201941CC9E000409FB"
                BuildableName = "Sheerpaper.app"
-               BlueprintName = "MacDown"
-               ReferencedContainer = "container:MacDown.xcodeproj">
+               BlueprintName = "Sheerpaper"
+               ReferencedContainer = "container:Sheerpaper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1FA6DE441941CC9E000409FB"
-               BuildableName = "MacDownTests.xctest"
-               BlueprintName = "MacDownTests"
-               ReferencedContainer = "container:MacDown.xcodeproj">
+               BuildableName = "SheerpaperTests.xctest"
+               BlueprintName = "SheerpaperTests"
+               ReferencedContainer = "container:Sheerpaper.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1FA6DE201941CC9E000409FB"
             BuildableName = "Sheerpaper.app"
-            BlueprintName = "MacDown"
-            ReferencedContainer = "container:MacDown.xcodeproj">
+            BlueprintName = "Sheerpaper"
+            ReferencedContainer = "container:Sheerpaper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,8 +67,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1FA6DE201941CC9E000409FB"
             BuildableName = "Sheerpaper.app"
-            BlueprintName = "MacDown"
-            ReferencedContainer = "container:MacDown.xcodeproj">
+            BlueprintName = "Sheerpaper"
+            ReferencedContainer = "container:Sheerpaper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -86,8 +86,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1FA6DE201941CC9E000409FB"
             BuildableName = "Sheerpaper.app"
-            BlueprintName = "MacDown"
-            ReferencedContainer = "container:MacDown.xcodeproj">
+            BlueprintName = "Sheerpaper"
+            ReferencedContainer = "container:Sheerpaper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,6 +1,6 @@
 # Sheerpaper
 
-![Sheerpaper logo](https://raw.githubusercontent.com/RidgestoneLabs/sheerpaper/main/MacDown/Images.xcassets/AppIcon.appiconset/icon_128x128@2x.png)
+![Sheerpaper logo](https://raw.githubusercontent.com/RidgestoneLabs/sheerpaper/main/Sheerpaper/Images.xcassets/AppIcon.appiconset/icon_128x128@2x.png)
 
 Hello there! I’m **Sheerpaper**, the open source Markdown editor for OS X.
 

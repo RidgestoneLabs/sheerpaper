@@ -1,6 +1,6 @@
 SASS = node_modules/.bin/sass
 
-target = ../../MacDown/Resources/Styles/GitHub-2020.css
+target = ../../Sheerpaper/Resources/Styles/GitHub-2020.css
 
 all: $(target)
 

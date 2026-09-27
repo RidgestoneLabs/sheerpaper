@@ -24,10 +24,10 @@ Clone the repository with its submodule and install the dependencies:
     pod install
     (cd Tools/GitHub-style-generator && npm install)
 
-Then open `MacDown.xcworkspace` in Xcode and run the `MacDown` scheme. The Xcode project, targets and source folders still carry the MacDown name. To test and build from the command line instead:
+Then open `Sheerpaper.xcworkspace` in Xcode and run the `Sheerpaper` scheme. To test and build from the command line instead:
 
-    xcodebuild -workspace MacDown.xcworkspace -scheme MacDown -configuration Debug -derivedDataPath build/DD CODE_SIGNING_ALLOWED=NO test
-    xcodebuild -workspace MacDown.xcworkspace -scheme MacDown -configuration Release -derivedDataPath build/DD CODE_SIGNING_ALLOWED=NO build
+    xcodebuild -workspace Sheerpaper.xcworkspace -scheme Sheerpaper -configuration Debug -derivedDataPath build/DD CODE_SIGNING_ALLOWED=NO test
+    xcodebuild -workspace Sheerpaper.xcworkspace -scheme Sheerpaper -configuration Release -derivedDataPath build/DD CODE_SIGNING_ALLOWED=NO build
 
 The app ends up at `build/DD/Build/Products/Release/Sheerpaper.app`.
 

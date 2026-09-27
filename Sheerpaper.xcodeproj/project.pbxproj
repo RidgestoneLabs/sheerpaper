@@ -38,7 +38,7 @@
 		1F396E6619B0EA17000D3EFC /* MPEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F396E6519B0EA17000D3EFC /* MPEditorView.m */; };
 		1F3A47521953E84700293259 /* help.md in Resources */ = {isa = PBXBuildFile; fileRef = 1F3A47511953E84700293259 /* help.md */; };
 		1F3FC87C1C854E1C000965E1 /* NSPasteboard+Types.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3FC87B1C854E1C000965E1 /* NSPasteboard+Types.m */; };
-		1F3FC8AA1C85AE9F000965E1 /* MacDown.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 1F3FC8A91C85AE9F000965E1 /* MacDown.sdef */; };
+		1F3FC8AA1C85AE9F000965E1 /* Sheerpaper.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 1F3FC8A91C85AE9F000965E1 /* Sheerpaper.sdef */; };
 		1F41FF7B1C8EEE9200FD9886 /* Templates in Resources */ = {isa = PBXBuildFile; fileRef = 1F41FF7A1C8EEE9200FD9886 /* Templates */; };
 		1F4C8E9A194AE0B9004BF82E /* MarkdownDocument.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1F4C8E99194AE0B9004BF82E /* MarkdownDocument.icns */; };
 		1F51C9A5194565050015A96F /* MPPreferencesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDCA311944F96E00B1F966 /* MPPreferencesTests.m */; };
@@ -83,13 +83,13 @@
 		1FFEB32B19737D6E00B2254F /* YAMLSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFEB32A19737D6E00B2254F /* YAMLSerialization.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -Wno-unused-variable"; }; };
 		1FFF301D1948A5320009AF24 /* MPStringLookupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF301C1948A5320009AF24 /* MPStringLookupTests.m */; };
 		3028039E1FD84EAC0055B0DA /* contribute.md in Resources */ = {isa = PBXBuildFile; fileRef = 3028039D1FD84EAB0055B0DA /* contribute.md */; };
-		770BB49E962A302D0715A6A5 /* libPods-MacDown.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F926DD38559C7CEDB6E42F /* libPods-MacDown.a */; };
+		770BB49E962A302D0715A6A5 /* libPods-Sheerpaper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F926DD38559C7CEDB6E42F /* libPods-Sheerpaper.a */; };
 		852D523C1E260A6400BA7162 /* MPTerminalPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852D523A1E260A6400BA7162 /* MPTerminalPreferencesViewController.m */; };
 		85E24E5C1E5019C00056E696 /* MPToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E24E5B1E5019C00056E696 /* MPToolbarController.m */; };
 		905EF1A9196164CA00FC3CE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905EF1A8196164CA00FC3CE9 /* Foundation.framework */; };
 		905EF1B7196164F300FC3CE9 /* sheerpaper in Copy Command Line Utility */ = {isa = PBXBuildFile; fileRef = 905EF1A7196164CA00FC3CE9 /* sheerpaper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B5C5C1666A506FEA86435D25 /* libPods-macdown-cmd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 263367245B2D78A42C2F19D7 /* libPods-macdown-cmd.a */; };
-		EBFE3157737058F5A63699C8 /* libPods-MacDownTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C949FDE45493AE77DAD9BF4 /* libPods-MacDownTests.a */; };
+		B5C5C1666A506FEA86435D25 /* libPods-sheerpaper-cmd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 263367245B2D78A42C2F19D7 /* libPods-sheerpaper-cmd.a */; };
+		EBFE3157737058F5A63699C8 /* libPods-SheerpaperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C949FDE45493AE77DAD9BF4 /* libPods-SheerpaperTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,7 +119,7 @@
 			containerPortal = 1FA6DE191941CC9E000409FB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 905EF1A6196164CA00FC3CE9;
-			remoteInfo = "MacDown-cmd";
+			remoteInfo = "sheerpaper-cmd";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -148,8 +148,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D0EC0DE9FEA22F962083921 /* Pods-MacDownTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacDownTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacDownTests/Pods-MacDownTests.release.xcconfig"; sourceTree = "<group>"; };
-		1A198D1BA59D710201DD3BC8 /* Pods-MacDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacDown.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacDown/Pods-MacDown.debug.xcconfig"; sourceTree = "<group>"; };
+		0D0EC0DE9FEA22F962083921 /* Pods-SheerpaperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheerpaperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SheerpaperTests/Pods-SheerpaperTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A198D1BA59D710201DD3BC8 /* Pods-Sheerpaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sheerpaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sheerpaper/Pods-Sheerpaper.debug.xcconfig"; sourceTree = "<group>"; };
 		1F002A21195B3DAE008B8D93 /* MPRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPRenderer.h; sourceTree = "<group>"; };
 		1F002A22195B3DAE008B8D93 /* MPRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPRenderer.m; sourceTree = "<group>"; };
 		1F05E8AB1F36E53B00E4D06C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Localization/fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
@@ -211,12 +211,12 @@
 		1F0D9D8A194AC83C008E1856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Localization/Base.lproj/MPMarkdownPreferencesViewController.xib; sourceTree = "<group>"; };
 		1F0D9D91194AC852008E1856 /* MPDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPDocument.h; sourceTree = "<group>"; };
 		1F0D9D92194AC852008E1856 /* MPDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPDocument.m; sourceTree = "<group>"; };
-		1F0D9DA3194AC8B3008E1856 /* MacDown-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MacDown-Info.plist"; sourceTree = "<group>"; };
+		1F0D9DA3194AC8B3008E1856 /* Sheerpaper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sheerpaper-Info.plist"; sourceTree = "<group>"; };
 		1F0D9DA7194AC8CB008E1856 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Localization/en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		1F0D9DA9194AC8CB008E1856 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localization/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1F0D9DAC194AC8EF008E1856 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F0D9DAE194AC905008E1856 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Code/main.m; sourceTree = "<group>"; };
-		1F0D9DB5194ACA33008E1856 /* MacDown-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MacDown-Prefix.pch"; path = "Code/MacDown-Prefix.pch"; sourceTree = "<group>"; };
+		1F0D9DB5194ACA33008E1856 /* Sheerpaper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Sheerpaper-Prefix.pch"; path = "Code/Sheerpaper-Prefix.pch"; sourceTree = "<group>"; };
 		1F0F3BFB195F75F200FC0B3B /* MathJax */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MathJax; path = Resources/MathJax; sourceTree = "<group>"; };
 		1F20EA242099A18A00C81510 /* nb-NO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nb-NO"; path = "Localization/nb-NO.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1F20EA252099A18A00C81510 /* nb-NO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nb-NO"; path = "Localization/nb-NO.lproj/MPExportPanelAccessoryViewController.strings"; sourceTree = "<group>"; };
@@ -265,7 +265,7 @@
 		1F3A47511953E84700293259 /* help.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = help.md; path = Resources/help.md; sourceTree = "<group>"; };
 		1F3FC87A1C854E1C000965E1 /* NSPasteboard+Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPasteboard+Types.h"; sourceTree = "<group>"; };
 		1F3FC87B1C854E1C000965E1 /* NSPasteboard+Types.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPasteboard+Types.m"; sourceTree = "<group>"; };
-		1F3FC8A91C85AE9F000965E1 /* MacDown.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = MacDown.sdef; path = Resources/MacDown.sdef; sourceTree = "<group>"; };
+		1F3FC8A91C85AE9F000965E1 /* Sheerpaper.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Sheerpaper.sdef; path = Resources/Sheerpaper.sdef; sourceTree = "<group>"; };
 		1F41FF7A1C8EEE9200FD9886 /* Templates */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Templates; path = Resources/Templates; sourceTree = "<group>"; };
 		1F4C8E99194AE0B9004BF82E /* MarkdownDocument.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MarkdownDocument.icns; path = Resources/MarkdownDocument.icns; sourceTree = "<group>"; };
 		1F51C9A1194564670015A96F /* libPods-MacDown-PAPreferences.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MacDown-PAPreferences.a"; path = "../../../../Library/Developer/Xcode/DerivedData/MacDown-ggdtxvuybojeqbhjydkhilziizrv/Build/Products/Debug/libPods-MacDown-PAPreferences.a"; sourceTree = "<group>"; };
@@ -301,8 +301,8 @@
 		1F847BC31DCC9DA800A47385 /* MPGlobals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPGlobals.h; sourceTree = "<group>"; };
 		1F847BC41DCC9DB600A47385 /* NSUserDefaults+Suite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Suite.h"; sourceTree = "<group>"; };
 		1F847BC51DCC9DB600A47385 /* NSUserDefaults+Suite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Suite.m"; sourceTree = "<group>"; };
-		1F8858BA1A2D8D82008DC543 /* MPArgumentProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPArgumentProcessor.h; path = "macdown-cmd/MPArgumentProcessor.h"; sourceTree = SOURCE_ROOT; };
-		1F8858BB1A2D8D82008DC543 /* MPArgumentProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPArgumentProcessor.m; path = "macdown-cmd/MPArgumentProcessor.m"; sourceTree = SOURCE_ROOT; };
+		1F8858BA1A2D8D82008DC543 /* MPArgumentProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPArgumentProcessor.h; path = "sheerpaper-cmd/MPArgumentProcessor.h"; sourceTree = SOURCE_ROOT; };
+		1F8858BB1A2D8D82008DC543 /* MPArgumentProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPArgumentProcessor.m; path = "sheerpaper-cmd/MPArgumentProcessor.m"; sourceTree = SOURCE_ROOT; };
 		1F8A82D819533E9300B6BF69 /* Prism */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Prism; path = Resources/Prism; sourceTree = "<group>"; };
 		1F8A83571953454F00B6BF69 /* HGMarkdownHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HGMarkdownHighlighter.h; path = "Dependency/peg-markdown-highlight/HGMarkdownHighlighter.h"; sourceTree = SOURCE_ROOT; };
 		1F8A83581953454F00B6BF69 /* HGMarkdownHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGMarkdownHighlighter.m; path = "Dependency/peg-markdown-highlight/HGMarkdownHighlighter.m"; sourceTree = SOURCE_ROOT; };
@@ -402,7 +402,7 @@
 		1FA6DE271941CC9E000409FB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		1FA6DE281941CC9E000409FB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1FA6DE291941CC9E000409FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1FA6DE451941CC9E000409FB /* MacDownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacDownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FA6DE451941CC9E000409FB /* SheerpaperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SheerpaperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA9196B1E4723A200850517 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Localization/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1FB3C0231E5061A2002AEB6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Localization/Base.lproj/MPExportPanelAccessoryViewController.xib; sourceTree = "<group>"; };
 		1FB813A32099A228004EC5D7 /* et */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = et; path = Localization/et.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -428,8 +428,8 @@
 		1FBDFE9B196170FE00BEEA70 /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Extensions; path = Resources/Extensions; sourceTree = "<group>"; };
 		1FBDFE9E1962A25A00BEEA70 /* MPGeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGeneralPreferencesViewController.h; sourceTree = "<group>"; };
 		1FBDFE9F1962A25A00BEEA70 /* MPGeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGeneralPreferencesViewController.m; sourceTree = "<group>"; };
-		1FBDFEA41962A27300BEEA70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = MacDown/Localization/Base.lproj/MPGeneralPreferencesViewController.xib; sourceTree = SOURCE_ROOT; };
-		1FBE8E0E1A11DB1E003E1EF4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "macdown-cmd/main.m"; sourceTree = SOURCE_ROOT; };
+		1FBDFEA41962A27300BEEA70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Sheerpaper/Localization/Base.lproj/MPGeneralPreferencesViewController.xib; sourceTree = SOURCE_ROOT; };
+		1FBE8E0E1A11DB1E003E1EF4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "sheerpaper-cmd/main.m"; sourceTree = SOURCE_ROOT; };
 		1FC29F5B1944FC2600D616C7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1FCBDF0B1E536C8400C0F56B /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Localization/sv.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		1FCBDF0C1E536C8400C0F56B /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Localization/sv.lproj/MPExportPanelAccessoryViewController.strings; sourceTree = "<group>"; };
@@ -466,7 +466,7 @@
 		1FCBDF2B1E536CB700C0F56B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		1FCD71131A20BA3A00C028B5 /* version.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = version.xcodeproj; sourceTree = "<group>"; };
 		1FCD711A1A20BE2F00C028B5 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = Dependency/version/version.h; sourceTree = SOURCE_ROOT; };
-		1FCDCA301944F96E00B1F966 /* MacDownTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MacDownTests-Info.plist"; sourceTree = "<group>"; };
+		1FCDCA301944F96E00B1F966 /* SheerpaperTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SheerpaperTests-Info.plist"; sourceTree = "<group>"; };
 		1FCDCA311944F96E00B1F966 /* MPPreferencesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPreferencesTests.m; sourceTree = "<group>"; };
 		1FCDCA331944F96E00B1F966 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1FCE066319633D6B00DC83B4 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = Resources/Data; sourceTree = "<group>"; };
@@ -483,19 +483,19 @@
 		1FFEB32919737D6E00B2254F /* YAMLSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAMLSerialization.h; sourceTree = "<group>"; };
 		1FFEB32A19737D6E00B2254F /* YAMLSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAMLSerialization.m; sourceTree = "<group>"; };
 		1FFF301C1948A5320009AF24 /* MPStringLookupTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPStringLookupTests.m; sourceTree = "<group>"; };
-		263367245B2D78A42C2F19D7 /* libPods-macdown-cmd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-macdown-cmd.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		263367245B2D78A42C2F19D7 /* libPods-sheerpaper-cmd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sheerpaper-cmd.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3028039D1FD84EAB0055B0DA /* contribute.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = contribute.md; path = Resources/contribute.md; sourceTree = "<group>"; };
-		39EFCAE04F60154F0C8C5469 /* Pods-MacDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacDown.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacDown/Pods-MacDown.release.xcconfig"; sourceTree = "<group>"; };
-		3C949FDE45493AE77DAD9BF4 /* libPods-MacDownTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MacDownTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39EFCAE04F60154F0C8C5469 /* Pods-Sheerpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sheerpaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sheerpaper/Pods-Sheerpaper.release.xcconfig"; sourceTree = "<group>"; };
+		3C949FDE45493AE77DAD9BF4 /* libPods-SheerpaperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SheerpaperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D175F0F1974282400A5EFE8 /* WebView+WebViewPrivateHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebView+WebViewPrivateHeaders.h"; sourceTree = "<group>"; };
-		42F926DD38559C7CEDB6E42F /* libPods-MacDown.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MacDown.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DBAA63927A60EB2150642B3 /* Pods-macdown-cmd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macdown-cmd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-macdown-cmd/Pods-macdown-cmd.debug.xcconfig"; sourceTree = "<group>"; };
-		7A8EA75FA95818275755F0B6 /* Pods-macdown-cmd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macdown-cmd.release.xcconfig"; path = "Pods/Target Support Files/Pods-macdown-cmd/Pods-macdown-cmd.release.xcconfig"; sourceTree = "<group>"; };
+		42F926DD38559C7CEDB6E42F /* libPods-Sheerpaper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sheerpaper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DBAA63927A60EB2150642B3 /* Pods-sheerpaper-cmd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sheerpaper-cmd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sheerpaper-cmd/Pods-sheerpaper-cmd.debug.xcconfig"; sourceTree = "<group>"; };
+		7A8EA75FA95818275755F0B6 /* Pods-sheerpaper-cmd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sheerpaper-cmd.release.xcconfig"; path = "Pods/Target Support Files/Pods-sheerpaper-cmd/Pods-sheerpaper-cmd.release.xcconfig"; sourceTree = "<group>"; };
 		852D52391E260A6400BA7162 /* MPTerminalPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTerminalPreferencesViewController.h; sourceTree = "<group>"; };
 		852D523A1E260A6400BA7162 /* MPTerminalPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTerminalPreferencesViewController.m; sourceTree = "<group>"; };
 		85E24E5A1E5019C00056E696 /* MPToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPToolbarController.h; path = Code/Application/MPToolbarController.h; sourceTree = "<group>"; };
 		85E24E5B1E5019C00056E696 /* MPToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPToolbarController.m; path = Code/Application/MPToolbarController.m; sourceTree = "<group>"; };
-		8CDC5EA0050D2F722FB1AADD /* Pods-MacDownTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacDownTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacDownTests/Pods-MacDownTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8CDC5EA0050D2F722FB1AADD /* Pods-SheerpaperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheerpaperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SheerpaperTests/Pods-SheerpaperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		905EF1A7196164CA00FC3CE9 /* sheerpaper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = sheerpaper; sourceTree = BUILT_PRODUCTS_DIR; };
 		905EF1A8196164CA00FC3CE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E70ECDD4241C933C00537A46 /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "Localization/ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -533,7 +533,7 @@
 				1FF1420219A8987500CF8A6A /* JavaScriptCore.framework in Frameworks */,
 				1FF207631941CF22005B5654 /* WebKit.framework in Frameworks */,
 				1FA6DE251941CC9E000409FB /* Cocoa.framework in Frameworks */,
-				770BB49E962A302D0715A6A5 /* libPods-MacDown.a in Frameworks */,
+				770BB49E962A302D0715A6A5 /* libPods-Sheerpaper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +543,7 @@
 			files = (
 				1FA6DE481941CC9E000409FB /* Cocoa.framework in Frameworks */,
 				1FC29F5C1944FC2600D616C7 /* XCTest.framework in Frameworks */,
-				EBFE3157737058F5A63699C8 /* libPods-MacDownTests.a in Frameworks */,
+				EBFE3157737058F5A63699C8 /* libPods-SheerpaperTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				905EF1A9196164CA00FC3CE9 /* Foundation.framework in Frameworks */,
-				B5C5C1666A506FEA86435D25 /* libPods-macdown-cmd.a in Frameworks */,
+				B5C5C1666A506FEA86435D25 /* libPods-sheerpaper-cmd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,7 +675,7 @@
 				1F0D9DA6194AC8CB008E1856 /* Credits.rtf */,
 				1F3A47511953E84700293259 /* help.md */,
 				1F59491A1AB57C78007394CB /* syntax_highlighting.json */,
-				1F3FC8A91C85AE9F000965E1 /* MacDown.sdef */,
+				1F3FC8A91C85AE9F000965E1 /* Sheerpaper.sdef */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -684,7 +684,7 @@
 			isa = PBXGroup;
 			children = (
 				1F0D9DAE194AC905008E1856 /* main.m */,
-				1F0D9DB5194ACA33008E1856 /* MacDown-Prefix.pch */,
+				1F0D9DB5194ACA33008E1856 /* Sheerpaper-Prefix.pch */,
 			);
 			name = "Additional Sources";
 			sourceTree = "<group>";
@@ -697,7 +697,7 @@
 				1FFEB32819737D6E00B2254F /* YAML-framework */,
 			);
 			name = Dependency;
-			path = MacDown;
+			path = Sheerpaper;
 			sourceTree = "<group>";
 		};
 		1F8A83561953453A00B6BF69 /* peg-markdown-highlight */ = {
@@ -745,9 +745,9 @@
 			isa = PBXGroup;
 			children = (
 				1F8A83551953453100B6BF69 /* Dependency */,
-				1FCDC9EB1944F89B00B1F966 /* MacDown */,
-				1FCDCA2F1944F96E00B1F966 /* MacDownTests */,
-				905EF1AA196164CA00FC3CE9 /* macdown-cmd */,
+				1FCDC9EB1944F89B00B1F966 /* Sheerpaper */,
+				1FCDCA2F1944F96E00B1F966 /* SheerpaperTests */,
+				905EF1AA196164CA00FC3CE9 /* sheerpaper-cmd */,
 				1FA6DE231941CC9E000409FB /* Frameworks */,
 				1FA6DE221941CC9E000409FB /* Products */,
 				AC6D1A361B8B63012D598BC7 /* Pods */,
@@ -759,7 +759,7 @@
 			isa = PBXGroup;
 			children = (
 				1FA6DE211941CC9E000409FB /* Sheerpaper.app */,
-				1FA6DE451941CC9E000409FB /* MacDownTests.xctest */,
+				1FA6DE451941CC9E000409FB /* SheerpaperTests.xctest */,
 				905EF1A7196164CA00FC3CE9 /* sheerpaper */,
 			);
 			name = Products;
@@ -775,9 +775,9 @@
 				1FA6DE241941CC9E000409FB /* Cocoa.framework */,
 				905EF1A8196164CA00FC3CE9 /* Foundation.framework */,
 				1FA6DE261941CC9E000409FB /* Other Frameworks */,
-				42F926DD38559C7CEDB6E42F /* libPods-MacDown.a */,
-				3C949FDE45493AE77DAD9BF4 /* libPods-MacDownTests.a */,
-				263367245B2D78A42C2F19D7 /* libPods-macdown-cmd.a */,
+				42F926DD38559C7CEDB6E42F /* libPods-Sheerpaper.a */,
+				3C949FDE45493AE77DAD9BF4 /* libPods-SheerpaperTests.a */,
+				263367245B2D78A42C2F19D7 /* libPods-sheerpaper-cmd.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -808,7 +808,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1FCDC9EB1944F89B00B1F966 /* MacDown */ = {
+		1FCDC9EB1944F89B00B1F966 /* Sheerpaper */ = {
 			isa = PBXGroup;
 			children = (
 				1F0D9D62194AC7CF008E1856 /* Utility */,
@@ -819,7 +819,7 @@
 				1F0D9D90194AC852008E1856 /* Document */,
 				1FCDCA2D1944F8F600B1F966 /* Supporting Files */,
 			);
-			path = MacDown;
+			path = Sheerpaper;
 			sourceTree = "<group>";
 		};
 		1FCDCA2D1944F8F600B1F966 /* Supporting Files */ = {
@@ -827,7 +827,7 @@
 			children = (
 				1F4C8E9C194AE0CE004BF82E /* Additional Sources */,
 				1F4C8E9B194AE0C3004BF82E /* Resources */,
-				1F0D9DA3194AC8B3008E1856 /* MacDown-Info.plist */,
+				1F0D9DA3194AC8B3008E1856 /* Sheerpaper-Info.plist */,
 				1F0D9DA8194AC8CB008E1856 /* InfoPlist.strings */,
 				1F2789691973BEB100EE696A /* Localizable.strings */,
 				1F0D9DAC194AC8EF008E1856 /* Images.xcassets */,
@@ -835,7 +835,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1FCDCA2F1944F96E00B1F966 /* MacDownTests */ = {
+		1FCDCA2F1944F96E00B1F966 /* SheerpaperTests */ = {
 			isa = PBXGroup;
 			children = (
 				1FF1420319A8A24800CF8A6A /* MPUtilityTests.m */,
@@ -846,13 +846,13 @@
 				1FFEB3261972DAB400B2254F /* MPHTMLTabularizeTests.m */,
 				1FCDCA371944F97800B1F966 /* Supporting Files */,
 			);
-			path = MacDownTests;
+			path = SheerpaperTests;
 			sourceTree = "<group>";
 		};
 		1FCDCA371944F97800B1F966 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1FCDCA301944F96E00B1F966 /* MacDownTests-Info.plist */,
+				1FCDCA301944F96E00B1F966 /* SheerpaperTests-Info.plist */,
 				1FCDCA321944F96E00B1F966 /* InfoPlist.strings */,
 				1FFEB31F1972B04D00B2254F /* test.txt */,
 				1FFEB31A19729FD500B2254F /* test.js */,
@@ -871,7 +871,7 @@
 			path = "Dependency/YAML-framework";
 			sourceTree = SOURCE_ROOT;
 		};
-		905EF1AA196164CA00FC3CE9 /* macdown-cmd */ = {
+		905EF1AA196164CA00FC3CE9 /* sheerpaper-cmd */ = {
 			isa = PBXGroup;
 			children = (
 				1FCD711A1A20BE2F00C028B5 /* version.h */,
@@ -879,18 +879,18 @@
 				1F8858BB1A2D8D82008DC543 /* MPArgumentProcessor.m */,
 				1FBE8E0E1A11DB1E003E1EF4 /* main.m */,
 			);
-			path = "macdown-cmd";
+			path = "sheerpaper-cmd";
 			sourceTree = "<group>";
 		};
 		AC6D1A361B8B63012D598BC7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1A198D1BA59D710201DD3BC8 /* Pods-MacDown.debug.xcconfig */,
-				39EFCAE04F60154F0C8C5469 /* Pods-MacDown.release.xcconfig */,
-				8CDC5EA0050D2F722FB1AADD /* Pods-MacDownTests.debug.xcconfig */,
-				0D0EC0DE9FEA22F962083921 /* Pods-MacDownTests.release.xcconfig */,
-				4DBAA63927A60EB2150642B3 /* Pods-macdown-cmd.debug.xcconfig */,
-				7A8EA75FA95818275755F0B6 /* Pods-macdown-cmd.release.xcconfig */,
+				1A198D1BA59D710201DD3BC8 /* Pods-Sheerpaper.debug.xcconfig */,
+				39EFCAE04F60154F0C8C5469 /* Pods-Sheerpaper.release.xcconfig */,
+				8CDC5EA0050D2F722FB1AADD /* Pods-SheerpaperTests.debug.xcconfig */,
+				0D0EC0DE9FEA22F962083921 /* Pods-SheerpaperTests.release.xcconfig */,
+				4DBAA63927A60EB2150642B3 /* Pods-sheerpaper-cmd.debug.xcconfig */,
+				7A8EA75FA95818275755F0B6 /* Pods-sheerpaper-cmd.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -898,9 +898,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1FA6DE201941CC9E000409FB /* MacDown */ = {
+		1FA6DE201941CC9E000409FB /* Sheerpaper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FA6DE551941CC9E000409FB /* Build configuration list for PBXNativeTarget "MacDown" */;
+			buildConfigurationList = 1FA6DE551941CC9E000409FB /* Build configuration list for PBXNativeTarget "Sheerpaper" */;
 			buildPhases = (
 				B4334ECDC0751C835C1600D7 /* [CP] Check Pods Manifest.lock */,
 				1FA6DE1D1941CC9E000409FB /* Sources */,
@@ -919,14 +919,14 @@
 				905EF1B5196164DD00FC3CE9 /* PBXTargetDependency */,
 				1FE2197819534A5D00DB931F /* PBXTargetDependency */,
 			);
-			name = MacDown;
+			name = Sheerpaper;
 			productName = MarkPad;
 			productReference = 1FA6DE211941CC9E000409FB /* Sheerpaper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1FA6DE441941CC9E000409FB /* MacDownTests */ = {
+		1FA6DE441941CC9E000409FB /* SheerpaperTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FA6DE581941CC9E000409FB /* Build configuration list for PBXNativeTarget "MacDownTests" */;
+			buildConfigurationList = 1FA6DE581941CC9E000409FB /* Build configuration list for PBXNativeTarget "SheerpaperTests" */;
 			buildPhases = (
 				655CCD821E310F9767572216 /* [CP] Check Pods Manifest.lock */,
 				1FA6DE411941CC9E000409FB /* Sources */,
@@ -938,14 +938,14 @@
 			dependencies = (
 				1FA6DE4A1941CC9E000409FB /* PBXTargetDependency */,
 			);
-			name = MacDownTests;
+			name = SheerpaperTests;
 			productName = MarkPadTests;
-			productReference = 1FA6DE451941CC9E000409FB /* MacDownTests.xctest */;
+			productReference = 1FA6DE451941CC9E000409FB /* SheerpaperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		905EF1A6196164CA00FC3CE9 /* macdown-cmd */ = {
+		905EF1A6196164CA00FC3CE9 /* sheerpaper-cmd */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 905EF1B3196164CA00FC3CE9 /* Build configuration list for PBXNativeTarget "macdown-cmd" */;
+			buildConfigurationList = 905EF1B3196164CA00FC3CE9 /* Build configuration list for PBXNativeTarget "sheerpaper-cmd" */;
 			buildPhases = (
 				6C852F8D7610992AEEA172AE /* [CP] Check Pods Manifest.lock */,
 				905EF1A3196164CA00FC3CE9 /* Sources */,
@@ -957,8 +957,8 @@
 			dependencies = (
 				1F4574791A2D87D500DFA5FF /* PBXTargetDependency */,
 			);
-			name = "macdown-cmd";
-			productName = "MacDown-cmd";
+			name = "sheerpaper-cmd";
+			productName = "sheerpaper-cmd";
 			productReference = 905EF1A7196164CA00FC3CE9 /* sheerpaper */;
 			productType = "com.apple.product-type.tool";
 		};
@@ -977,7 +977,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1FA6DE1C1941CC9E000409FB /* Build configuration list for PBXProject "MacDown" */;
+			buildConfigurationList = 1FA6DE1C1941CC9E000409FB /* Build configuration list for PBXProject "Sheerpaper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1024,9 +1024,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				1FA6DE201941CC9E000409FB /* MacDown */,
-				1FA6DE441941CC9E000409FB /* MacDownTests */,
-				905EF1A6196164CA00FC3CE9 /* macdown-cmd */,
+				1FA6DE201941CC9E000409FB /* Sheerpaper */,
+				1FA6DE441941CC9E000409FB /* SheerpaperTests */,
+				905EF1A6196164CA00FC3CE9 /* sheerpaper-cmd */,
 			);
 		};
 /* End PBXProject section */
@@ -1057,7 +1057,7 @@
 				1F59491B1AB57C78007394CB /* syntax_highlighting.json in Resources */,
 				1F0D9DAB194AC8CB008E1856 /* InfoPlist.strings in Resources */,
 				1FCE066419633D6C00DC83B4 /* Data in Resources */,
-				1F3FC8AA1C85AE9F000965E1 /* MacDown.sdef in Resources */,
+				1F3FC8AA1C85AE9F000965E1 /* Sheerpaper.sdef in Resources */,
 				1FB3C0241E5061A2002AEB6A /* MPExportPanelAccessoryViewController.xib in Resources */,
 				3028039E1FD84EAC0055B0DA /* contribute.md in Resources */,
 			);
@@ -1083,7 +1083,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MacDown/Pods-MacDown-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Sheerpaper/Pods-Sheerpaper-resources.sh",
 				"${PODS_ROOT}/MASPreferences/Framework/en.lproj/MASPreferencesWindow.xib",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1092,7 +1092,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MacDown/Pods-MacDown-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sheerpaper/Pods-Sheerpaper-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1F8A82A81952F19B00B6BF69 /* Update Build Number */ = {
@@ -1122,7 +1122,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SOURCE=\"$PWD/Dependency/prism\"\nTARGET=\"$PWD/MacDown/Resources/Prism\"\nrm -rf \"$TARGET\"\nmkdir -p \"$TARGET\"\ncp -r \"$SOURCE/components\" \"$TARGET\"\ncp -r \"$SOURCE/themes\" \"$TARGET\"\ncp -r \"$SOURCE/plugins\" \"$TARGET\"\ncp -r \"$SOURCE/components.js\" \"$TARGET\"\n";
+			shellScript = "SOURCE=\"$PWD/Dependency/prism\"\nTARGET=\"$PWD/Sheerpaper/Resources/Prism\"\nrm -rf \"$TARGET\"\nmkdir -p \"$TARGET\"\ncp -r \"$SOURCE/components\" \"$TARGET\"\ncp -r \"$SOURCE/themes\" \"$TARGET\"\ncp -r \"$SOURCE/plugins\" \"$TARGET\"\ncp -r \"$SOURCE/components.js\" \"$TARGET\"\n";
 			showEnvVarsInLog = 0;
 		};
 		655CCD821E310F9767572216 /* [CP] Check Pods Manifest.lock */ = {
@@ -1136,7 +1136,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MacDownTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SheerpaperTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1154,7 +1154,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-macdown-cmd-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-sheerpaper-cmd-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1172,7 +1172,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MacDown-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Sheerpaper-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1185,7 +1185,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MacDown/Pods-MacDown-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Sheerpaper/Pods-Sheerpaper-frameworks.sh",
 				"${PODS_ROOT}/Sparkle/Sparkle.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1194,7 +1194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MacDown/Pods-MacDown-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sheerpaper/Pods-Sheerpaper-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E7FD807B2106CA8F0087F0A8 /* Transpile Styles */ = {
@@ -1291,7 +1291,7 @@
 		};
 		1FA6DE4A1941CC9E000409FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1FA6DE201941CC9E000409FB /* MacDown */;
+			target = 1FA6DE201941CC9E000409FB /* Sheerpaper */;
 			targetProxy = 1FA6DE491941CC9E000409FB /* PBXContainerItemProxy */;
 		};
 		1FE2197819534A5D00DB931F /* PBXTargetDependency */ = {
@@ -1301,7 +1301,7 @@
 		};
 		905EF1B5196164DD00FC3CE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 905EF1A6196164CA00FC3CE9 /* macdown-cmd */;
+			target = 905EF1A6196164CA00FC3CE9 /* sheerpaper-cmd */;
 			targetProxy = 905EF1B4196164DD00FC3CE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1745,14 +1745,14 @@
 		};
 		1FA6DE561941CC9E000409FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A198D1BA59D710201DD3BC8 /* Pods-MacDown.debug.xcconfig */;
+			baseConfigurationReference = 1A198D1BA59D710201DD3BC8 /* Pods-Sheerpaper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MacDown/Code/MacDown-Prefix.pch";
-				INFOPLIST_FILE = "MacDown/MacDown-Info.plist";
+				GCC_PREFIX_HEADER = "Sheerpaper/Code/Sheerpaper-Prefix.pch";
+				INFOPLIST_FILE = "Sheerpaper/Sheerpaper-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ridgestonelabs.${PRODUCT_NAME:rfc1034identifier:lower}-debug";
 				PRODUCT_NAME = Sheerpaper;
@@ -1763,14 +1763,14 @@
 		};
 		1FA6DE571941CC9E000409FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39EFCAE04F60154F0C8C5469 /* Pods-MacDown.release.xcconfig */;
+			baseConfigurationReference = 39EFCAE04F60154F0C8C5469 /* Pods-Sheerpaper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MacDown/Code/MacDown-Prefix.pch";
-				INFOPLIST_FILE = "MacDown/MacDown-Info.plist";
+				GCC_PREFIX_HEADER = "Sheerpaper/Code/Sheerpaper-Prefix.pch";
+				INFOPLIST_FILE = "Sheerpaper/Sheerpaper-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ridgestonelabs.${PRODUCT_NAME:rfc1034identifier:lower}";
 				PRODUCT_NAME = Sheerpaper;
@@ -1781,7 +1781,7 @@
 		};
 		1FA6DE591941CC9E000409FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CDC5EA0050D2F722FB1AADD /* Pods-MacDownTests.debug.xcconfig */;
+			baseConfigurationReference = 8CDC5EA0050D2F722FB1AADD /* Pods-SheerpaperTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sheerpaper.app/Contents/MacOS/Sheerpaper";
 				CLANG_ENABLE_MODULES = NO;
@@ -1791,19 +1791,19 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MacDown/Code/MacDown-Prefix.pch";
+				GCC_PREFIX_HEADER = "Sheerpaper/Code/Sheerpaper-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "MacDownTests/MacDownTests-Info.plist";
+				INFOPLIST_FILE = "SheerpaperTests/SheerpaperTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MacDown-ggdtxvuybojeqbhjydkhilziizrv/Build/Products/Debug",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ridgestonelabs.${PRODUCT_NAME:rfc1034identifier:lower}";
-				PRODUCT_NAME = MacDownTests;
+				PRODUCT_NAME = SheerpaperTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1811,7 +1811,7 @@
 		};
 		1FA6DE5A1941CC9E000409FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D0EC0DE9FEA22F962083921 /* Pods-MacDownTests.release.xcconfig */;
+			baseConfigurationReference = 0D0EC0DE9FEA22F962083921 /* Pods-SheerpaperTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sheerpaper.app/Contents/MacOS/Sheerpaper";
 				CLANG_ENABLE_MODULES = NO;
@@ -1821,15 +1821,15 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MacDown/Code/MacDown-Prefix.pch";
-				INFOPLIST_FILE = "MacDownTests/MacDownTests-Info.plist";
+				GCC_PREFIX_HEADER = "Sheerpaper/Code/Sheerpaper-Prefix.pch";
+				INFOPLIST_FILE = "SheerpaperTests/SheerpaperTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MacDown-ggdtxvuybojeqbhjydkhilziizrv/Build/Products/Debug",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ridgestonelabs.${PRODUCT_NAME:rfc1034identifier:lower}";
-				PRODUCT_NAME = MacDownTests;
+				PRODUCT_NAME = SheerpaperTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1837,7 +1837,7 @@
 		};
 		905EF1B1196164CA00FC3CE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DBAA63927A60EB2150642B3 /* Pods-macdown-cmd.debug.xcconfig */;
+			baseConfigurationReference = 4DBAA63927A60EB2150642B3 /* Pods-sheerpaper-cmd.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
@@ -1852,7 +1852,7 @@
 		};
 		905EF1B2196164CA00FC3CE9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A8EA75FA95818275755F0B6 /* Pods-macdown-cmd.release.xcconfig */;
+			baseConfigurationReference = 7A8EA75FA95818275755F0B6 /* Pods-sheerpaper-cmd.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
@@ -1864,7 +1864,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1FA6DE1C1941CC9E000409FB /* Build configuration list for PBXProject "MacDown" */ = {
+		1FA6DE1C1941CC9E000409FB /* Build configuration list for PBXProject "Sheerpaper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1FA6DE531941CC9E000409FB /* Debug */,
@@ -1873,7 +1873,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FA6DE551941CC9E000409FB /* Build configuration list for PBXNativeTarget "MacDown" */ = {
+		1FA6DE551941CC9E000409FB /* Build configuration list for PBXNativeTarget "Sheerpaper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1FA6DE561941CC9E000409FB /* Debug */,
@@ -1882,7 +1882,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FA6DE581941CC9E000409FB /* Build configuration list for PBXNativeTarget "MacDownTests" */ = {
+		1FA6DE581941CC9E000409FB /* Build configuration list for PBXNativeTarget "SheerpaperTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1FA6DE591941CC9E000409FB /* Debug */,
@@ -1891,7 +1891,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		905EF1B3196164CA00FC3CE9 /* Build configuration list for PBXNativeTarget "macdown-cmd" */ = {
+		905EF1B3196164CA00FC3CE9 /* Build configuration list for PBXNativeTarget "sheerpaper-cmd" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				905EF1B1196164CA00FC3CE9 /* Debug */,
