@@ -1,0 +1,219 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+defaults:
+  run:
+    # An explicit bash shell adds pipefail to the runner's default -e.
+    shell: bash
+
+jobs:
+  release:
+    runs-on: macos-26
+    timeout-minutes: 60
+    environment: release
+    permissions:
+      contents: write
+    env:
+      APP: build/DD/Build/Products/Release/Sheerpaper.app
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: true
+          # The version and build number come from tags and commit counts.
+          fetch-depth: 0
+
+      - name: Check the tag
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          next=$(cat Tools/version.txt)
+          suffix="${version#"$next"}"
+          if [[ "$suffix" == "$version" || "$suffix" =~ ^[0-9.] ]]; then
+            echo "::error::$GITHUB_REF_NAME doesn't match Tools/version.txt ($next)."
+            exit 1
+          fi
+          if ! git merge-base --is-ancestor HEAD origin/main; then
+            echo "::error::$GITHUB_REF_NAME isn't on main."
+            exit 1
+          fi
+          # Tools/utils.sh counts the build number against a local main.
+          git branch --force main origin/main
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+          if [ -n "$suffix" ]; then
+            echo "PRERELEASE=true" >> "$GITHUB_ENV"
+          else
+            echo "PRERELEASE=false" >> "$GITHUB_ENV"
+          fi
+
+      - name: Check the update signing key
+        env:
+          SPARKLE_ED_KEY: ${{ secrets.SPARKLE_ED_KEY }}
+        run: |
+          # generate_appcast only warns when the key doesn't match the app,
+          # and publishes an unsigned update that every copy would reject.
+          expected=$(/usr/libexec/PlistBuddy -c "Print :SUPublicEDKey" Sheerpaper/Sheerpaper-Info.plist)
+          actual=$(printf %s "$SPARKLE_ED_KEY" | base64 --decode | tail -c 32 | base64)
+          if [ "$actual" != "$expected" ]; then
+            echo "::error::SPARKLE_ED_KEY doesn't match SUPublicEDKey in Info.plist."
+            exit 1
+          fi
+
+      - name: Install dependencies
+        run: |
+          make -C Dependency/peg-markdown-highlight
+          pod install
+          (cd Tools/GitHub-style-generator && npm ci)
+
+      - name: Build
+        env:
+          # update_build_number.sh skips itself under CI, but a release needs
+          # the computed version.
+          CI: false
+        run: >-
+          xcodebuild -workspace Sheerpaper.xcworkspace -scheme Sheerpaper
+          -configuration Release -derivedDataPath build/DD
+          CODE_SIGNING_ALLOWED=NO build
+
+      - name: Check the built version
+        run: |
+          plist="$APP/Contents/Info.plist"
+          built=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "$plist")
+          if [ "$built" != "$VERSION" ]; then
+            echo "::error::Built version $built doesn't match $GITHUB_REF_NAME."
+            exit 1
+          fi
+          echo "BUILD=$(/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" "$plist")" >> "$GITHUB_ENV"
+
+      - name: Import the signing certificate
+        env:
+          DEVELOPER_ID_P12: ${{ secrets.DEVELOPER_ID_P12 }}
+          DEVELOPER_ID_P12_PASSWORD: ${{ secrets.DEVELOPER_ID_P12_PASSWORD }}
+        run: |
+          keychain="$RUNNER_TEMP/signing.keychain-db"
+          password=$(openssl rand -base64 24)
+          security create-keychain -p "$password" "$keychain"
+          security set-keychain-settings -lut 21600 "$keychain"
+          security unlock-keychain -p "$password" "$keychain"
+          printf %s "$DEVELOPER_ID_P12" | base64 --decode > "$RUNNER_TEMP/developer-id.p12"
+          security import "$RUNNER_TEMP/developer-id.p12" -k "$keychain" \
+            -P "$DEVELOPER_ID_P12_PASSWORD" -T /usr/bin/codesign
+          rm "$RUNNER_TEMP/developer-id.p12"
+          security set-key-partition-list -S apple-tool:,apple: -k "$password" "$keychain" > /dev/null
+          security list-keychains -d user -s "$keychain" $(security list-keychains -d user | tr -d '"')
+
+      - name: Sign
+        run: Tools/sign_app.sh "$APP" "Developer ID Application"
+
+      - name: Notarize
+        env:
+          NOTARY_KEY: ${{ secrets.NOTARY_KEY }}
+          NOTARY_KEY_ID: ${{ secrets.NOTARY_KEY_ID }}
+          NOTARY_ISSUER: ${{ secrets.NOTARY_ISSUER }}
+        run: |
+          printf %s "$NOTARY_KEY" > "$RUNNER_TEMP/notary.p8"
+          auth=(--key "$RUNNER_TEMP/notary.p8" --key-id "$NOTARY_KEY_ID")
+          # Individual API keys have no issuer; team keys do.
+          if [ -n "$NOTARY_ISSUER" ]; then auth+=(--issuer "$NOTARY_ISSUER"); fi
+          ditto -c -k --keepParent "$APP" "$RUNNER_TEMP/notarize.zip"
+          xcrun notarytool submit "$RUNNER_TEMP/notarize.zip" "${auth[@]}" \
+            --wait --output-format json > "$RUNNER_TEMP/notary.json" || true
+          cat "$RUNNER_TEMP/notary.json"
+          if [ "$(jq -r .status "$RUNNER_TEMP/notary.json")" != Accepted ]; then
+            xcrun notarytool log "$(jq -r .id "$RUNNER_TEMP/notary.json")" "${auth[@]}"
+            exit 1
+          fi
+          xcrun stapler staple "$APP"
+          spctl --assess --type execute --verbose "$APP"
+
+      - name: Package
+        run: |
+          mkdir "$RUNNER_TEMP/archives"
+          zip="$RUNNER_TEMP/archives/Sheerpaper-$VERSION.zip"
+          ditto -c -k --sequesterRsrc --keepParent "$APP" "$zip"
+          echo "ZIP=$zip" >> "$GITHUB_ENV"
+
+      - name: Update the update feeds
+        env:
+          SPARKLE_ED_KEY: ${{ secrets.SPARKLE_ED_KEY }}
+        run: |
+          pages="$RUNNER_TEMP/pages"
+          if git rev-parse --verify --quiet origin/gh-pages > /dev/null; then
+            git worktree add "$pages" origin/gh-pages
+          else
+            git worktree add --orphan -b gh-pages "$pages"
+          fi
+          feeds=appcast-testing.xml
+          if [ "$PRERELEASE" = false ]; then feeds="appcast.xml $feeds"; fi
+          # EdDSA signatures are deterministic, so the feed has to carry
+          # exactly this one.
+          signature=$(Pods/Sparkle/bin/sign_update -s "$SPARKLE_ED_KEY" "$ZIP" \
+            | sed -nE 's/.*edSignature="([^"]*)".*/\1/p')
+          if [ -z "$signature" ]; then
+            echo "::error::sign_update didn't produce a signature."
+            exit 1
+          fi
+          for feed in $feeds; do
+            Pods/Sparkle/bin/generate_appcast -s "$SPARKLE_ED_KEY" \
+              --download-url-prefix "https://github.com/$GITHUB_REPOSITORY/releases/download/$GITHUB_REF_NAME/" \
+              -o "$pages/$feed" "$RUNNER_TEMP/archives"
+            actual=$(xmllint --xpath "string(//item/enclosure[@*[local-name()='version']='$BUILD']/@*[local-name()='edSignature'])" "$pages/$feed")
+            if [ "$actual" != "$signature" ]; then
+              echo "::error::$feed doesn't carry the archive's signature."
+              exit 1
+            fi
+          done
+
+      - name: Publish the GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # A re-run rebuilds the archive, so replace the old upload to keep
+          # it matching the signature in the feeds.
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" "$ZIP" --clobber
+          else
+            flags=(--title "Sheerpaper $VERSION" --generate-notes --verify-tag)
+            if [ "$PRERELEASE" = true ]; then flags+=(--prerelease); fi
+            gh release create "$GITHUB_REF_NAME" "$ZIP" "${flags[@]}"
+          fi
+
+      - name: Commit the update feeds
+        working-directory: ${{ runner.temp }}/pages
+        run: |
+          git add appcast*.xml
+          git -c user.name="github-actions[bot]" \
+            -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "Publish Sheerpaper $VERSION"
+          git push origin HEAD:gh-pages
+
+      - name: Remove the signing keychain
+        if: always()
+        run: security delete-keychain "$RUNNER_TEMP/signing.keychain-db" || true
+
+  feeds:
+    needs: release
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: gh-pages
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+
+      - id: deploy
+        uses: actions/deploy-pages@v5

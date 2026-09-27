@@ -111,3 +111,32 @@ A maintainer may ask you to rebase or squash after you open the pull request, or
 ### Translations
 
 Localized strings live in `Sheerpaper/Localization/<language>.lproj`. Edit them directly and send a pull request.
+
+## Releasing
+
+Pushing a version tag runs the Release workflow (`.github/workflows/release.yml`). It builds, signs and notarizes the app, publishes a GitHub release with the zip, and adds the release to the update feeds on GitHub Pages.
+
+Versions are `YEAR.N`: 2026.1, 2026.2, and then 2027.1 the next year. `Tools/version.txt` holds the version of the next release.
+
+1. Check that `Tools/version.txt` holds the version you're releasing and that the commit is on `main`.
+2. Tag the commit and push the tag:
+
+        git tag v2026.1
+        git push origin v2026.1
+
+3. Once the release is out, open a pull request that bumps `Tools/version.txt` to the next version.
+
+A tag with a letter suffix, such as `v2026.2b1`, is a pre-release. GitHub marks it as one, and it only goes to the testing feed, which users get when they opt in to pre-release updates.
+
+The workflow's `release` environment needs these secrets:
+
+| Secret | Contents |
+| --- | --- |
+| `DEVELOPER_ID_P12` | The Developer ID Application certificate and its private key, as a base64-encoded `.p12` |
+| `DEVELOPER_ID_P12_PASSWORD` | The `.p12`'s password |
+| `NOTARY_KEY` | The contents of an App Store Connect API key (`.p8`), used for notarization |
+| `NOTARY_KEY_ID` | That key's ID |
+| `NOTARY_ISSUER` | Its issuer ID, for a team key. Leave it unset for an individual key. |
+| `SPARKLE_ED_KEY` | The 128-character Sparkle EdDSA private key that matches `SUPublicEDKey` in `Info.plist` |
+
+Installed copies only accept an update signed with the EdDSA key, so keep it the same across releases. Sparkle allows a new signing certificate or a new EdDSA key in a single update, but never both.
