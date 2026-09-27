@@ -110,4 +110,4 @@ A maintainer may ask you to rebase or squash after you open the pull request, or
 
 ### Translations
 
-Localized strings live in `MacDown/Localization/<language>.lproj`. Edit them directly and send a pull request.
+Localized strings live in `Sheerpaper/Localization/<language>.lproj`. Edit them directly and send a pull request.

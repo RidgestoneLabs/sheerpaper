@@ -3,11 +3,11 @@ platform :osx, "12.0"
 source 'https://github.com/MacDownApp/cocoapods-specs.git'  # Patched libraries.
 source 'https://cdn.cocoapods.org/'
 
-project 'MacDown.xcodeproj'
+project 'Sheerpaper.xcodeproj'
 
 inhibit_all_warnings!
 
-target "MacDown" do
+target "Sheerpaper" do
   pod 'handlebars-objc', '~> 1.4'
   pod 'hoedown', '~> 3.0.7', :inhibit_warnings => false
   pod 'JJPluralForm', '~> 2.1'
@@ -20,11 +20,11 @@ target "MacDown" do
   pod 'PAPreferences', '~> 0.4'
 end
 
-target "MacDownTests" do
+target "SheerpaperTests" do
   pod 'PAPreferences', '~> 0.4'
 end
 
-target "macdown-cmd" do
+target "sheerpaper-cmd" do
   pod 'GBCli', '~> 1.1'
 end
 

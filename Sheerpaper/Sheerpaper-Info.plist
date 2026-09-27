@@ -122,7 +122,7 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>OSAScriptingDefinition</key>
-	<string>MacDown.sdef</string>
+	<string>Sheerpaper.sdef</string>
 	<key>SUBetaFeedURL</key>
 	<string>https://ridgestonelabs.github.io/sheerpaper/appcast-testing.xml</string>
 	<key>SUFeedURL</key>
