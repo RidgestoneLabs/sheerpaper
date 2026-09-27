@@ -91,6 +91,22 @@ NS_INLINE void treat()
 }
 
 
+@interface MPPreferencesWindowController : MASPreferencesWindowController
+@end
+
+@implementation MPPreferencesWindowController
+
+- (void)windowDidLoad
+{
+    // MASPreferences sizes the window for the first pane in -windowDidLoad,
+    // so the toolbar needs its final height before that.
+    self.window.toolbarStyle = NSWindowToolbarStylePreference;
+    [super windowDidLoad];
+}
+
+@end
+
+
 @interface MPMainController ()
 @property (readonly) NSWindowController *preferencesWindowController;
 @end
@@ -203,7 +219,7 @@ NS_INLINE void treat()
         NSString *title = NSLocalizedString(@"Preferences",
                                             @"Preferences window title.");
 
-        typedef MASPreferencesWindowController WC;
+        typedef MPPreferencesWindowController WC;
         _preferencesWindowController =
             [[WC alloc] initWithViewControllers:vcs title:title];
     }
