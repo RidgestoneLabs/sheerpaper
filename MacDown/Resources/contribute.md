@@ -18,4 +18,4 @@ Contribution is not limited to software developers, since there are other ways y
 
 ## License
 
-Sheerpaper is released under the terms of MIT License. For more details take a look at the [README](https://github.com/RidgestoneLabs/sheerpaper/blob/master/README.md).
+Sheerpaper is released under the terms of MIT License. For more details take a look at the [README](https://github.com/RidgestoneLabs/sheerpaper/blob/main/README.md).
