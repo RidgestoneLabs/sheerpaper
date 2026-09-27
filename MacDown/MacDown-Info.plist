@@ -127,6 +127,8 @@
 	<string>https://ridgestonelabs.github.io/sheerpaper/appcast-testing.xml</string>
 	<key>SUFeedURL</key>
 	<string>https://ridgestonelabs.github.io/sheerpaper/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>vdlMLZ/QUJrX5uurF6Z/fUISvdkhwpD3zyaZN9kK/Yk=</string>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
