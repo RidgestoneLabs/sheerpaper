@@ -124,7 +124,7 @@ NS_INLINE void treat()
 }
 
 // Open a file from a browser with url of the form :
-// "x-macdown://open?url=file:///path/to/a/file&line=123&column=45"
+// "x-sheerpaper://open?url=file:///path/to/a/file&line=123&column=45"
 - (void)openUrlSchemeAppleEvent:(NSAppleEventDescriptor *)event
                  withReplyEvent:(NSAppleEventDescriptor *)reply
 {
