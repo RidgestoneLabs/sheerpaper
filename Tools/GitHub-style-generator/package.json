@@ -10,6 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "primer-markdown": "^4.0.0",
-    "sass": "^1.105.0"
+    "sass": "^1.106.1"
   }
 }
